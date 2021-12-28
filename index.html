@@ -1,0 +1,216 @@
+<?php
+session_start();
+include("connection.php")
+include("functions.php")
+$user_data= check_login($con);
+?>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+    <link href="temple.css?v-1.4" rel="stylesheet" type="text/css">
+
+    <title>Ganga & Krishnamurthy Temple</title>
+    <style>
+        textarea {
+            vertical-align: top
+        }
+
+        .gray {
+            color: rgb(128, 128, 128);
+            font-weight: bold
+        }
+
+        .container a {
+            text-decoration: none
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div style="flex:1"><img src="GKT Logo Nagappa Pendent-300.png" width="100"></div>
+        <div style="flex:3;text-align:center">
+            <h1>Ganga & Krishnamurthy Temple<br> Special Mobile Temple<br> Virtual & In Your Home Services</h1>
+        </div>
+        <div style="flex:1;text-align:center"><a href="https://www.paypal.com/donate?hosted_button_id=3CDS3PDWVNSJQ" target="_blank">
+	  <img src="donate.jpg"></a>
+            <p><b>Non-Profit Donation tax<br>
+	  deductible</b></div>
+	  
+	 <!--<button class="btn Login">Login</button>-->
+         <style>
+		 <<!-- .btn{
+			border: 2px solid black;
+			height:30px;
+			background-color: gray;
+			padding: 14px 28px;
+			font-size: 16px;
+			
+			font-weight: bold;
+			cursor: pointer;-->
+			
+		 }</style>
+    </header>
+    <div class="container">
+
+        <nav id="site-navigation" class="main-navigation" role="navigation">
+
+            <ul class="nav-menu">
+
+                <li><a href="index.html">Home</a></li>
+                <li><a href="priests.html">Priests</a></li>
+                <li><a href="volunteer.html">Volunteer Opportunities</a></li>
+                <li><a href="stories.html">Stories</a></li>
+                <li> <a href="donors.html">Donors</a></li>
+				
+            </ul>
+        </nav><br>
+        <h1 class="center">People, request God that you get your property! Our Naga idol is consecrated for that purpose. Fulfill good wishes of the deceased by doing charity in the case of forebears’ property.</h1><br>
+        <p class="center"><em>People of ALL faiths are welcome. Special Mobile Temple expected to open in spring/summer 2022.</em><br><br>
+            <div style="width:40%;margin:0 auto">
+                <p class="center">
+                    <img src="essay9-250.jpg">
+            </div>
+            <p class="center gray">Illustrations:Sabrina Brook</p>
+            <!--<p><img src="callout.jpg" alt="callout" class="img-center">
+                <p><b>Devotees, please fill form as much as possible and press submit.</b></p>
+
+                <form action="temple.php" method="post">
+                    <label for="legalname">Name, legal</label>
+                    <input type="text" id="legalname" name="legalname" required><br>
+                    <label for="email">Email address</label>
+                    <input type="email" id="email" name="email"><br>
+                    <label for="phone">Phone number</label>
+                    <input type="text" id="phone" name="phone"><br>
+                    <label for="address">Address, if in location of your choice such as your home where service is to be performed. If virtual, please write Virtual.</label>
+                    <input type="text" id="address" name="address"><br>
+                    <label for="date">Date you want service</label>
+                    <input type="date" id="date" name="date"><br>
+                    <label for="name">Name of Pooja or Abhisheka or Homa</label>
+                    <select name="name" id="name">
+		<option>Pooja</option>
+		<option>Abhisheka</option>
+		<option>Homa</option>
+	</select><br>
+
+
+
+                    <label for="gothra">Gothra [Lineage]</label>
+                    <input type="text" id="gothre" name="gothre"><br>
+                    <label for="star">Nakshathra [Star] </label>
+                    <select name="star" id="star">
+		<option>Ashwini</option>
+		<option>Bharani</option>
+		<option>Krithika</option>
+		<option>Rohini</option>
+		<option>Mrigashirsha</option>
+		<option>Arudra</option>
+		<option>Punarvasu</option>
+		<option>Pushyami</option>
+		<option>Ashlesha</option>
+		<option>Makha</option>
+		<option>Purva Phalguni</option>
+		<option>Uttara Phalguni</option>
+		<option>Hasta</option>
+		<option>Chitra</option>
+		<option>Swathi</option>
+		<option>Vishaka</option>
+		<option>Anuradha</option>
+		<option>Jyeshta</option>
+		<option>Moola</option>
+		<option>Purvashada</option>
+		<option>Uttarashada</option>
+		<option>Sravana</option>
+		<option>Dhanishta</option>
+		<option>Shatabhisha</option>
+		<option>Purvabhadra</option>
+		<option>Uttarabhadra</option>
+		<option>Revathi</option>
+	</select><br>
+
+                    <label for="zodiac" name="zodiac">Raashi [Zodiac sign]<br>
+	<b>English&nbsp;&nbsp;&nbsp;Samskrutha&nbsp;&nbsp;&nbsp;Transliteration</b></label><br>
+                    <select name="zodiac" id="zodiac">
+		<option>Aries&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;मेष&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Meṣha</option>
+		<option>Taurus&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;वृषभ:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vṛṣabhaḥ</option>
+		<option>Gemini&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;मिथुन:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mithunaḥ</option>
+		<option>Cancer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;कर्क:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Karkaḥ</option>
+		<option>Leo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;सिंह:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Siṁhaḥ</option>
+		<option>Virgo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;कन्या&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kanyā</option>
+		<option>Libra&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;तुला&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tulā</option>
+		<option>Scorpio&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;कन्या&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vṛścikaḥ</option>
+		<option>Saggitarius&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;धनु:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dhanuḥ</option>
+		<option>Capricorn&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;मकर:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Makaraḥ</option>
+		<option>Aquarius&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;कुम्भ:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Kumbhaḥ</option>
+		<option>Pisces&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;मीन:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Mīnaḥ</option>
+	</select><br>
+
+                    <label for="namewanted">Name as you want in service</label>
+                    <input type="text" id="namewanted" name="namewanted"><br>
+                    <label for="comment">Comments</label>
+                    <textarea id="comment" name="comment" rows="4" cols="100">
+	</textarea><br>
+                    <input type="submit" value="submit">
+                </form>-->
+				<p><b>PROCEDURE FOR BOOKING SERVICE: </b><br><br>
+				1.	We lend our idol to you with or without ‘tools’ [such as bell, oil lamps] required for the service.<br><br>
+				2.	Arrange, with fee, with a priest of your choice to perform the service either in your home or in his home or elsewhere. Arrange for <t><t>materials [such as flowers, fruits].</t></t><br><br>
+				3.	Email GKTempleGK@gmail.com of date, time, location and whether or not your priest wants us to provide the ‘tools’. <br><br>
+				4.	Temple Fee is $50 with or without the ‘tools’. Driver fee for transporting the idol is $X <br><br></p>
+				<p><b>FOUNDING GANGA & KRISHNAMURTHY TEMPLE</b><br>
+				<p>Ganga & Krishnamurthy Temple is being founded by me, R.V. Nagaveni M.D., M.S., to honor my charitable paternal Grandmother Gangamma and also my Great Grandfather who treated her well. I am commencing with one idol of Naga. The Naga idol
+                    will be consecrated to enable women to request God that they get their family property and do charity. In the case of forebears’ property, that they be able to get the property, do charity and fulfill the wishes of the deceased.
+                    <p>We shall bring the idol to places such as homes or other places where devotees request a service to be performed. The service will also be available virtually.
+                          <p>Ganga and Krishnamurthy Temple is named after my paternal Grandmother Gangamma and her Father Krishnamurthy. She was named after the Water Goddess Ganga. Grandmother Gangamma was a very intelligent, loving, non-discriminating
+                                    and charitable woman.
+                                    <p>Gangamma's father, Advocate Krishnamurthy, walking 2222 miles, made a pilgrimage from the village Kadaba, Karnataka state, Bharatha, to the city of Kaashi on the bank of the holy river Ganga at the confluence of three
+                                        rivers. Upon his return, his second child was born. He named the baby 'Ganga'.
+                                        <p><img src="grandmother.jpg" class="img-center">
+                                            <p class="center gray">Grandmother Gangamma in 331, 15<sup>th</sup> Cross, 2<sup>nd</sup> Block, Jayanagara, Bengaluru 560011.
+                                                <p><img src="grandmothersitting.jpg" class="img-center">
+                                                    <p class="center gray">Grandmother Gangamma at home in the garage, reading Kannada Chandamama in the warm winter sunshine.</p>
+                                                    <p>Influenza epidemics usually have a greater adverse effect on children and seniors than on others. The Influenza Pandemic of 1918 took the lives of healthy young adults. In that pandemic, Gangamma's husband,
+                                                        Venkanniah, a great Samskritha Scholar and her charitable father in law, Narayanappa, the head of a wealthy joint family, passed away fifteen days apart. Her unjust brothers-in-law, discriminating
+                                                        against her as a woman, greedily grabbed her rightful share of the property depriving her of a livelihood. They made a wealthy and charitable woman poverty stricken. Her two children were my father,
+                                                        three-year-old [Venkata] Ramiah, and his younger sister. By then, Gangamma's kindly father, Krishnamurthy, an advocate, had passed away.
+                                                        <p><b>More than a whole century later there has been no self-improvement in most Indian men regarding their attitude towards women. <a href="#">Most Indian men and women still believe in male superiority.</a> </b>
+                                                            <div class="flex">
+                                                                <div class="center gray"><img src="emanualnobel.jpg"><br><b>Emanuel Nobel, Alfred<br>Nobel's favorite nephew</b></div>
+                                                                <div class="center gray"><img src="alfred1.jpg"><br>
+                                                                    <b>Alfred Nobel<br> 
+21 Oct 1833 - 10 Dec 1896</b></div>
+                                                                <div class="center gray"><img src="sohlman.jpg"><br><b>Ragnar Sohlman, Alfred<br>Nobel's 26 yr. old Assistant<br> and Executor of his Will.</b>
+                                                                </div>
+                                                            </div>
+                                                            <p>The passage in Alfred Nobel's Will regarding the Nobel Prizes was legally defective. Hence, it was almost impossible to implement the will. Alfred Nobel's favorite nephew, Emanuel, who lived
+                                                                in Russia, wanted Nobel's wishes to be respected. Emanuel told Ragnar Sohlman, executor of Nobel's will, about the Russian concept that “The executor of the estate of the deceased is the
+                                                                spokesperson of the soul of the deceased”.
+                                                                <div class="flex" style="justify-content:center;width:60%;margin:0 auto">
+                                                                    <div class="center" style="flex:1"><img src="emblem1.png"><br>Literature reverse </div>
+                                                                    <div class="center" style="flex:1"><img src="emblem2.jpg"><br>Science and Literature obverse </div>
+                                                                </div>
+                                                                <div class="flex" style="justify-content:center;width:60%;margin:0 auto">
+                                                                    <div class="center" style="flex:1"><img src="emblem3.jpg"></div>
+                                                                    <div class="center" style="flex:1"><img src="emblem4.jpg"></div>
+                                                                </div>
+                                                                <p class="center">Peace obverse and reverse</p>
+                                                                <p>&nbsp;</p>
+                                                                <p class="center"><b>Nobel Medals</b>
+                                                                    <p><b>The saying helped Alfred Nobel’s 26-year-old testator <a href="emanual.html">Ragnar Sohlman</a> to implement Nobel’s Will and establish the Nobel Prize!</b></p>
+																	<div style="width:40%;margin:0 auto">
+																	<img src="essay12-250.jpg">
+																	</div>
+
+                                                                    <footer>
+                                                                        <p><b>“I slept and dreamt that life was joy. I awoke and saw that life was service. I acted and behold, service was joy!” – Ravindranath Tagore</b><br> Contact Us E-Mail: GKTempleGK@gmail.com<br> Federal Employer Identification Number <b>FEIN 85-4234900</b><br> Copyright © 2021 Ganga & Krishnamurthy
+                                                                            Temple. All Rights reserved.;
+    </div>
+    </footer>
+    </div>
+</body>
+
+</html>
